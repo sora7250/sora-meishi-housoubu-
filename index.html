@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -75,18 +76,19 @@
                 <i class="fa-solid fa-waveform-lines"></i>
             </div>
 
-            <!-- アバター画像 (カラー表示＆インラインBase64直接埋め込み) -->
+            <!-- アバター画像 (Google ドライブ公開URL対応 & カラー表示) -->
             <div class="relative inline-block mb-4">
                 <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-full p-1 border-2 border-mono-500/50 shadow-lg mx-auto bg-mono-900 overflow-hidden flex items-center justify-center ring-4 ring-white/10">
                     <img id="avatarImage" 
-                         src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgNTAwIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnTGlnaHQiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjODQ4YTk2Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzVhNWY2OSIvPgogICAgPC9saW5lYXJHYXJkaWVudD4KICAgIDxsaW5lYXJHYXJkaWVudCBpZD0ic3VpdEdyYWQiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjM2UzZjQ4Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzI2MjgyZSIvPgogICAgPC9saW5lYXJHYXJkaWVudD4KICAgIDxsaW5lYXJHYXJkaWVudCBpZD0ic2tpblNoYWRlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y2Y2ViOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjcwJSIgc3RvcC1jb2xvcj0iI2U2YjA5NCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkNDljNzciLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDwhLS0gYmFja2dyb3VuZCAtLT4KICA8cmVjdCB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0idXJsKCNiZ0xpZ2h0KSIvPgogIDwhLS0gc3VpdCAmIHNoaXJ0IC0tPgogIDxwYXRoIGQ9Ik03MCA1MDAgQzgwIDM4MCAxMzAgMzQwIDI1MCAzNDAgQzM3MCAzNDAgNDIwIDM4MCA0MzAgNTAwIFoiIGZpbGw9InVybCgjc3VpdEdyYWQpIi8+CiAgPHBhdGggZD0iTTE4MCAzNTAgTDI1MCA0NzAgTDIzMCA1MDAgTDE1MCA1MDAgWiIgZmlsbD0iIzFmMjEyNiIvPgogIDxwYXRoIGQ9Ik0zMjAgMzUwIEwyNTAgNDcwIEwyNzAgNTAwIEwzNTAgNTAwIFoiIGZpbGw9IiMxZjIxMjYiLz4KICA8cG9seWdvbiBwb2ludHM9IjIwMCwzNjAgMjUwLDQyMCAzMDAsMzYwIDI1MCwzNDUiIGZpbGw9IiNmZmZmZmYiLz4KICA8cG9seWdvbiBwb2ludHM9IjI0MCwzNjAgMjYwLDM2MCAyNTYsNDcwIDI0NCw0NzAiIGZpbGw9IiM1MzU4NjIiLz4KICA8cGF0aCBkPSJNMjM4IDM2MCBMMjYyIDM2MCBMMjU1IDM3MCBMMjQ1IDM3MCBaIiBmaWxsPSIjMmUyZTMwIi8+CiAgPCEtLSBuZWNrIC0tPgogIDxwYXRoIGQ9Ik0yMTAgMjg1IEwyOTAgMjg1IEwyOTAgMzYwIEwyMTAgMzYwIFoiIGZpbGw9InVybCgjc2tpblNoYWRlKSIvPgogIDxwYXRoIGQ9Ik0yMTAgMzAwIEMyMzAgMzMwIDI3MCAzMzAgMjkwIDMwMCBMMjkwIDM0MCBMMjEwIDM0MCBaIiBmaWxsPSIjYzg4Zjc1IiBvcGFjaXR5PSIwLjUiLz4KICA8IS0tIGhhbmQgYmVoaW5kIGhlYWQgKGxlZnQpIC0tPgogIDxwYXRoIGQ9Ik05MCAzMzAgQzYwIDM3MCA1MCA0MzAgNDAgNTAwIEwxMDAgNTAwIEMxMTAgNDIwIDEzMCAzNjAgMTQwIDMwMCBaIiBmaWxsPSJ1cmwoI3N1aXRHYmQpIi8+CiAgPHBhdGggZD0iTTEyNSAyNzAgQzExMCAyMzAgMTE1IDE4MCAxNTAgMjAwIEMxNjAgMjE1IDE2NSAyNDAgMTYwIDI2NSBaIiBmaWxsPSJ1cmwoI3NraW5TaGFkZSkiLz4KICA8IS0tIGZhY2UgLS0+CiAgPHBhdGggZD0iTTE1MCAyMDAgQzE0MCAxMzAgMTg1IDg1IDI1MCA4NSBDMzE1IDg1IDM2MCAxMzAgMzUwIDIwMCBDMzUwIDI2MCAzMTAgMjk1IDI1MCAyOTUgQzE5MCAyOTUgMTUwIDI2MCAxNTAgMjAwIFoiIGZpbGw9InVybCgjc2tpblNoYWRlKSIvPgogIDwhLS0gZWFycyAtLT4KICA8ZWxsaXBzZSBjeD0iMTUxIiBjeT0iMjAwIiByeD0iMTIiIHJ5PSIyMCIgZmlsbD0iI2U4YWQ5MSIvPgogIDxlbGxpcHNlIGN4PSIzNDkiIGN5PSIyMDAiIHJ4PSIxMiIgcnk9IjIwIiBmaWxsPSIjZThhZDkxIi8+CiAgPCEtLSBleWVzIC0tPgogIDxwYXRoIGQ9Ik0xOTAgMTgzIEMxOTggMTc0IDIxOCAxNzQgMjI2IDE4MyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjIxODExIiBzdHJva2Utd2lkdGg9IjYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik0yNzQgMTgzIEMyODIgMTc0IDMwMiAxNzQgMzEwIDE4MyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjIxODExIiBzdHJva2Utd2lkdGg9IjYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxlbGxpcHNlIGN4PSIyMDgiIGN5PSIxOTkiIHJ4PSIxMiIgcnk9IjExIiBmaWxsPSIjMmUxZTFkIi8+CiAgPGVsbGlwc2UgY3g9IjI5MiIgY3k9IjE5OSIgcng9IjEyIiByeT0iMTEiIGZpbGw9IiMyZTFlMWQiLz4KICA8Y2lyY2xlIGN4PSIyMDUiIGN5PSIxOTUiIHI9IjMiIGZpbGw9IiNmZmZmZmYiLz4KICA8Y2lyY2xlIGN4PSIyODkiIGN5PSIxOTUiIHI9IjMiIGZpbGw9IiNmZmZmZmYiLz4KICA8IS0tIG5vc2UgJiBzbWlsZSAtLT4KICA8cGF0aCBkPSJNMjQ2IDE5NSBDMjQwIDIxNSAyMzUgMjI2IDI0OCAyMzUgQzI1NSAyMzUgMjYwIDIyOCAyNTggMjIxIiBmaWxsPSJub25lIiBzdHJva2U9IiNjMDdhNjQiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPHBhdGggZD0iTTIzMCAyNTYgQzI0NSAyNjggMjY1IDI2NCAyNzYgMjU1IiBmaWxsPSJub25lIiBzdHJva2U9IiNhODVjNWMiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPCEtLSBkYXJrIHdhdnkgY3VybHkgaGFpciBiYXNlIC0tPgogIDxwYXRoIGQ9Ik0xNDAgMTgwIEMxMzAgOTAgMTYwIDUwIDI1MCA1MCBDMzQwIDUwIDM3MCA5MCAzNjAgMTgwIEMzODAgMTcwIDM4NSAxMTAgMzYwIDcwIEMzMjAgMzAgMTgwIDMwIDE0MCA3MCBDMTE1IDExMCAxMjAgMTcwIDE0MCAxODAgWiIgZmlsbD0iIzE1MTIwZiIvPgogIDxwYXRoIGQ9Ik0xNDUgMTYwIEMxNzAgMTEwIDIxMCAxMDUgMjQwIDEyNSBDMjcwIDEzMCAyOTAgMTEwIDMzMCAxNDAgQzM1MCAxNjAgMzQwIDE5MCAzMzAgMTY1IEMzMDUgMTQwIDI4MCAxNDUgMjYwIDE2NSBDMjM1IDE5MCAxODAgMTcwIDE0NSAxNjAgWiIgZmlsbD0iIzFmMTcxNSIvPgogIDxwYXRoIGQ9Ik0xNjAgMTAwIEMxOTAgNjAgMjgwIDYwIDMxMCAxMTAgQzI5MCA5MCAyMjAgNzUgMTgwIDk1IFoiIGZpbGw9IiMyOTIxMWMiLz4KICA8IS0tIHBsYXRpbnVtIGJsb25kZSBzdHJlYWtzIC8gbWVzaCBoaWdobGlnaHRzIC0tPgogIDxwYXRoIGQ9Ik0yMTAgNzAgQzIxMCA1NSAyMzAgNTAgMjQ1IDY4IEMyNDAgODUgMjMwIDk1IDIxNSAxMTUgQzIxMCA5NSAyMDUgODUgMjEwIDcwIFoiIGZpbGw9IiNlM2RlY2MiLz4KICA8cGF0aCBkPSJNMjM1IDcwIEMyNTUgNjAgMjc1IDc1IDI4NSAxMTAgQzI3MCA5NSAyNTUgOTAgMjQ1IDg1IFoiIGZpbGw9IiNmOGY0ZTgiLz4KICA8cGF0aCBkPSJNMTYwIDExNSBDMTc1IDkwIDE4NSA5NSAxOTAgMTEwIEMxNzggMTA1IDE3MCAxMTAgMTYwIDExNSBaIiBmaWxsPSIjZGRkNmNhIi8+CiAgPHBhdGggZD0iTTE2NSAxNTUgQzE3NSAxMzUgMTg1IDEzNSAxOTAgMTQ1IEMxODIgMTQyIDE3NSAxNDUgMTY1IDE1NSBaIiBmaWxsPSIjZjhjZDhkIiBvcGFjaXR5PSIwLjkiLz4KICA8cGF0aCBkPSJNMjg1IDEyMCBDMzA1IDExNSAzMjAgMTI1IDMyNSAxNDAgQzMxNSAxMzAgMzAwIDEzMCAyODUgMTIwIFoiIGZpbGw9IiNlNmUyZDYiLz4KICA8cGF0aCBkPSJNMjU1IDEwMCBMMjYwIDg1IEMyNzAgODAgMjc1IDg1IDI3MCAxMDAgWiIgZmlsbD0iI2ZmZmZmZiIvPgogIDwhLS0gY2hpYyBnbGFzc2VzIC8gZGV0YWlsIC0tPgogIDxwYXRoIGQ9Ik0yNDggMTkyIEwyNTIgMTkyIiBzdHJva2U9IiMyMjEiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+Cjwvc3ZnPg=="
+                         src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=300&h=300&q=80" 
                          alt="吉浦 蒼空" 
-                         class="w-full h-full object-cover rounded-full transition-transform duration-300 hover:scale-105">
+                         class="w-full h-full object-cover rounded-full transition-transform duration-300 hover:scale-105"
+                         referrerpolicy="no-referrer">
                 </div>
-                <label for="avatarUploader" class="absolute bottom-1 right-2 w-7 h-7 bg-mono-800 border-2 border-mono-500 hover:border-white rounded-full flex items-center justify-center shadow cursor-pointer transition" title="写真の変更">
-                    <i class="fa-solid fa-camera text-[11px] text-mono-200"></i>
-                    <input type="file" id="avatarUploader" accept="image/*" class="hidden">
-                </label>
+                <!-- GoogleドライブURL設定ボタン -->
+                <button type="button" id="openDriveModalBtn" class="absolute bottom-1 right-2 w-7 h-7 bg-mono-800 border-2 border-mono-500 hover:border-white rounded-full flex items-center justify-center shadow cursor-pointer transition text-mono-200 hover:text-white" title="Googleドライブの画像URLを設定">
+                    <i class="fa-brands fa-google-drive text-[12px]"></i>
+                </button>
             </div>
 
             <!-- 氏名とふりがな -->
@@ -247,12 +249,51 @@
 
     </main>
 
+    <!-- GoogleドライブURL設定モーダル -->
+    <div id="driveModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="grayscale-card bg-mono-900 border border-mono-700/80 rounded-3xl p-6 w-full max-w-sm text-left shadow-2xl">
+            <div class="flex items-center justify-between mb-3">
+                <div class="flex items-center gap-2">
+                    <i class="fa-brands fa-google-drive text-white text-lg"></i>
+                    <h2 class="text-sm font-bold text-white tracking-wide">Googleドライブ画像の登録</h2>
+                </div>
+                <button id="closeDriveModalBtn" class="text-mono-400 hover:text-white p-1 text-base transition">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <p class="text-xs text-mono-400 mb-3 leading-relaxed">
+                Googleドライブで「リンクを知っている全員が閲覧可」に設定した共有URL、またはファイルIDを貼り付けてください。自動的に画像表示用URLに変換されます。
+            </p>
+
+            <div class="space-y-3">
+                <div>
+                    <label for="driveUrlInput" class="block text-[11px] font-semibold text-mono-300 mb-1 uppercase tracking-wider">
+                        Google ドライブ 共有URL
+                    </label>
+                    <input type="text" id="driveUrlInput" 
+                           placeholder="https://drive.google.com/file/d/XXXXX/view?usp=sharing"
+                           class="w-full bg-mono-950 border border-mono-700 rounded-xl px-3 py-2 text-xs text-white placeholder-mono-600 focus:outline-none focus:border-white transition">
+                </div>
+
+                <div class="flex gap-2 pt-1">
+                    <button type="button" id="saveDriveUrlBtn" class="flex-1 py-2.5 rounded-xl bg-white text-mono-950 font-semibold text-xs tracking-wide hover:bg-mono-200 transition">
+                        設定して反映
+                    </button>
+                    <button type="button" id="cancelDriveModalBtn" class="py-2.5 px-4 rounded-xl bg-mono-800 text-mono-300 font-medium text-xs hover:bg-mono-700 transition">
+                        閉じる
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- フッター -->
     <footer class="w-full text-center mt-8 text-mono-500 text-xs tracking-wider">
         <p>&copy; Sora Yoshiura. All Rights Reserved.</p>
     </footer>
 
-    <!-- スクリプト: vCard生成・ダウンロード、トースト通知 -->
+    <!-- スクリプト: GoogleドライブURL変換、vCard生成・ダウンロード、トースト通知 -->
     <script>
         // トースト通知表示関数
         function showToast(message) {
@@ -268,58 +309,100 @@
             }, 2200);
         }
 
-        // 写真アップロード時にブラウザ内で自動軽量化・Base64化して表示 & ローカル保存
-        const avatarUploader = document.getElementById('avatarUploader');
-        const avatarImg = document.getElementById('avatarImage');
+        // Google ドライブの共有リンクからファイルIDを抽出し直リンクURLを生成
+        function convertDriveUrl(inputUrl) {
+            if (!inputUrl) return null;
+            const trimmed = inputUrl.trim();
 
-        // 保存されたアバターがあれば読み込み
-        const savedAvatar = localStorage.getItem('yoshiura_avatar_b64');
-        if (savedAvatar) {
-            avatarImg.src = savedAvatar;
+            // すでに直リンクや他Web画像URLの場合はそのまま返す
+            if (trimmed.startsWith('https://lh3.googleusercontent.com/') || 
+                trimmed.startsWith('https://drive.google.com/uc?')) {
+                return trimmed;
+            }
+
+            // GoogleドライブのIDパターン抽出 (/file/d/ID または id=ID)
+            const fileDMatch = trimmed.match(/\/file\/d\/([a-zA-Z0-9_-]+)/);
+            if (fileDMatch && fileDMatch[1]) {
+                return 'https://lh3.googleusercontent.com/d/' + fileDMatch[1];
+            }
+
+            const idParamMatch = trimmed.match(/[?&]id=([a-zA-Z0-9_-]+)/);
+            if (idParamMatch && idParamMatch[1]) {
+                return 'https://lh3.googleusercontent.com/d/' + idParamMatch[1];
+            }
+
+            // 英数字ハイフン等のみの場合はID直接入力とみなす
+            if (/^[a-zA-Z0-9_-]{25,}$/.test(trimmed)) {
+                return 'https://lh3.googleusercontent.com/d/' + trimmed;
+            }
+
+            return trimmed;
         }
 
-        avatarUploader.addEventListener('change', function(e) {
-            const file = e.target.files[0];
-            if (!file) return;
+        const avatarImg = document.getElementById('avatarImage');
+        const driveModal = document.getElementById('driveModal');
+        const openDriveModalBtn = document.getElementById('openDriveModalBtn');
+        const closeDriveModalBtn = document.getElementById('closeDriveModalBtn');
+        const cancelDriveModalBtn = document.getElementById('cancelDriveModalBtn');
+        const saveDriveUrlBtn = document.getElementById('saveDriveUrlBtn');
+        const driveUrlInput = document.getElementById('driveUrlInput');
 
-            const reader = new FileReader();
-            reader.onload = function(event) {
-                const img = new Image();
-                img.onload = function() {
-                    // Canvasでリサイズ & 軽量Base64(WebP/JPEG)圧縮
-                    const canvas = document.createElement('canvas');
-                    const maxDim = 320;
-                    let width = img.width;
-                    let height = img.height;
-                    if (width > height) {
-                        if (width > maxDim) {
-                            height *= maxDim / width;
-                            width = maxDim;
-                        }
-                    } else {
-                        if (height > maxDim) {
-                            width *= maxDim / height;
-                            height = maxDim;
-                        }
-                    }
-                    canvas.width = width;
-                    canvas.height = height;
-                    const ctx = canvas.getContext('2d');
-                    ctx.drawImage(img, 0, 0, width, height);
-                    
-                    // 軽量Base64データURI (品質0.85)
-                    const optimizedBase64 = canvas.toDataURL('image/jpeg', 0.85);
-                    avatarImg.src = optimizedBase64;
-                    try {
-                        localStorage.setItem('yoshiura_avatar_b64', optimizedBase64);
-                    } catch (err) {
-                        console.warn('Storage limit reached');
-                    }
-                    showToast('プロフィール写真を更新しました');
-                };
-                img.src = event.target.result;
-            };
-            reader.readAsDataURL(file);
+        // 保存されたGoogleドライブURLがあれば初期ロード
+        const savedDriveUrl = localStorage.getItem('yoshiura_drive_avatar_url');
+        if (savedDriveUrl) {
+            avatarImg.src = savedDriveUrl;
+            driveUrlInput.value = savedDriveUrl;
+        }
+
+        // モーダルの開閉処理
+        function openModal() {
+            driveModal.classList.remove('opacity-0', 'pointer-events-none');
+            driveModal.classList.add('opacity-100');
+            driveUrlInput.focus();
+        }
+
+        function closeModal() {
+            driveModal.classList.remove('opacity-100');
+            driveModal.classList.add('opacity-0', 'pointer-events-none');
+        }
+
+        openDriveModalBtn.addEventListener('click', openModal);
+        closeDriveModalBtn.addEventListener('click', closeModal);
+        cancelDriveModalBtn.addEventListener('click', closeModal);
+
+        // GoogleドライブURL保存と反映
+        saveDriveUrlBtn.addEventListener('click', function() {
+            const rawUrl = driveUrlInput.value;
+            const directUrl = convertDriveUrl(rawUrl);
+
+            if (!directUrl) {
+                showToast('URLを入力してください');
+                return;
+            }
+
+            avatarImg.src = directUrl;
+            try {
+                localStorage.setItem('yoshiura_drive_avatar_url', directUrl);
+            } catch (err) {
+                console.warn('Storage quota exceeded');
+            }
+
+            closeModal();
+            showToast('Googleドライブ写真を反映しました');
+        });
+
+        // 画像ロードエラー時のフォールバック処理
+        avatarImg.addEventListener('error', function() {
+            if (this.src.includes('lh3.googleusercontent.com/d/')) {
+                // 代替エンドポイント uc?export=view を試行
+                const fileId = this.src.split('/d/')[1];
+                if (fileId) {
+                    this.src = 'https://drive.google.com/uc?export=view&id=' + fileId;
+                    return;
+                }
+            }
+            // ドライブの公開権限が「非公開」の場合などの案内
+            showToast('画像の読み込みに失敗しました。ドライブの共有設定が「リンクを知っている全員」になっているかご確認ください');
         });
 
         // vCard (.vcf) 生成・ダウンロード
