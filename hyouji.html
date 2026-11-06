@@ -1,0 +1,379 @@
+```html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吉浦 蒼空 | 電子名刺 (Digital Business Card)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts Inter & Noto Sans JP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Inter"', '"Noto Sans JP"', 'sans-serif'],
+                    },
+                    colors: {
+                        mono: {
+                            50: '#F9FAFB',
+                            100: '#F3F4F6',
+                            200: '#E5E7EB',
+                            300: '#D1D5DB',
+                            400: '#9CA3AF',
+                            500: '#6B7280',
+                            600: '#4B5563',
+                            700: '#374151',
+                            800: '#1F2937',
+                            900: '#111827',
+                            950: '#030712',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* カスタムスクロールバー＆滑らかなトランジション */
+        body {
+            background-color: #0d0f12;
+            color: #E5E7EB;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .grayscale-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .grayscale-card:hover, .grayscale-card:active {
+            border-color: rgba(255, 255, 255, 0.28);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0.04) 100%);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased min-h-screen flex flex-col justify-between py-8 px-4 sm:px-6 relative overflow-x-hidden selection:bg-mono-700 selection:text-white">
+
+    <!-- 背景の微細な装飾グラデーション -->
+    <div class="fixed inset-0 pointer-events-none -z-10 flex items-center justify-center opacity-30">
+        <div class="w-96 h-96 rounded-full bg-mono-700 blur-[130px]"></div>
+    </div>
+
+    <!-- メインコンテンツコンテナ -->
+    <main class="w-full max-w-md mx-auto flex-1 flex flex-col items-center">
+
+        <!-- プロフィールヘッダーカード -->
+        <div class="w-full grayscale-card rounded-3xl p-6 sm:p-7 shadow-2xl mb-5 text-center relative overflow-hidden">
+            <!-- 背景の微かな音波・幾何学パターン (音響監督のモチーフ) -->
+            <div class="absolute -right-6 -bottom-6 opacity-5 pointer-events-none text-white text-9xl">
+                <i class="fa-solid fa-waveform-lines"></i>
+            </div>
+
+            <!-- アバター画像 (カラー表示＆Base64埋め込み) -->
+            <div class="relative inline-block mb-4">
+                <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-full p-1 border-2 border-mono-500/50 shadow-lg mx-auto bg-mono-900 overflow-hidden flex items-center justify-center ring-4 ring-white/10">
+                    <img id="avatarImage" 
+                         src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400' width='400' height='400'><defs><linearGradient id='bgGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%23636870'/><stop offset='100%25' stop-color='%23484c54'/></linearGradient><linearGradient id='skinGrad' x1='0%25' y1='0%25' x2='0%25' y2='100%25'><stop offset='0%25' stop-color='%23f1be9e'/><stop offset='100%25' stop-color='%23de9e77'/></linearGradient><linearGradient id='suitGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%23282b30'/><stop offset='100%25' stop-color='%23191b1e'/></linearGradient></defs><rect width='400' height='400' fill='url(%23bgGrad)'/><path d='M80 400 L80 340 L150 320 L165 370 L120 400 Z' fill='url(%23suitGrad)'/><path d='M320 400 L320 340 L250 320 L235 370 L280 400 Z' fill='url(%23suitGrad)'/><polygon points='165,370 200,330 235,370 200,400' fill='%23ffffff'/><polygon points='193,350 207,350 204,400 196,400' fill='%23686d76'/><polygon points='190,345 210,345 205,355 195,355' fill='%2340444c'/><path d='M60 400 C70 320 120 300 200 300 C280 300 330 320 340 400 Z' fill='url(%23suitGrad)' opacity='0.95'/><ellipse cx='200' cy='250' rx='42' ry='48' fill='url(%23skinGrad)'/><path d='M120 220 C120 145 160 115 200 115 C240 115 280 145 280 220 C280 260 250 290 200 290 C150 290 120 260 120 220 Z' fill='url(%23skinGrad)'/><ellipse cx='122' cy='215' rx='10' ry='16' fill='%23de9e77'/><ellipse cx='278' cy='215' rx='10' ry='16' fill='%23de9e77'/><path d='M110 185 C105 130 140 75 200 75 C260 75 295 130 290 185 C275 125 240 100 200 100 C160 100 125 125 110 185 Z' fill='%23221b18'/><path d='M135 110 Q160 85 180 120 Q165 95 145 112 Z' fill='%23eae6de'/><path d='M180 105 Q205 78 220 115 Q210 90 190 108 Z' fill='%23e2ded5'/><path d='M140 145 C155 120 185 130 195 155 C180 135 160 135 140 145 Z' fill='%23221b18'/><path d='M260 145 C245 120 215 130 205 155 C220 135 240 135 260 145 Z' fill='%23221b18'/><path d='M145 178 Q165 170 180 178' stroke='%2338271e' stroke-width='4' stroke-linecap='round' fill='none'/><path d='M220 178 Q235 170 255 178' stroke='%2338271e' stroke-width='4' stroke-linecap='round' fill='none'/><ellipse cx='165' cy='195' rx='9' ry='8' fill='%23452c1e'/><ellipse cx='235' cy='195' rx='9' ry='8' fill='%23452c1e'/><circle cx='163' cy='192' r='2.5' fill='%23ffffff'/><circle cx='233' cy='192' r='2.5' fill='%23ffffff'/><path d='M200 192 L196 225 L204 225 Z' fill='%23c98863'/><path d='M185 248 Q200 258 215 248' stroke='%23b8685e' stroke-width='4' stroke-linecap='round' fill='none'/><ellipse cx='140' cy='225' rx='16' ry='30' fill='%23e09873' transform='rotate(-20 140 225)'/><path d='M85 230 C80 200 95 180 115 195 L125 220 Z' fill='%23282b30'/></svg>"
+                         alt="吉浦 蒼空" 
+                         class="w-full h-full object-cover rounded-full transition-transform duration-300 hover:scale-105">
+                </div>
+                <label for="avatarUploader" class="absolute bottom-1 right-2 w-7 h-7 bg-mono-800 border-2 border-mono-500 hover:border-white rounded-full flex items-center justify-center shadow cursor-pointer transition" title="写真の変更">
+                    <i class="fa-solid fa-camera text-[11px] text-mono-200"></i>
+                    <input type="file" id="avatarUploader" accept="image/*" class="hidden">
+                </label>
+            </div>
+
+            <!-- 氏名とふりがな -->
+            <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-white mb-1">
+                吉浦 蒼空
+            </h1>
+            <p class="text-xs uppercase tracking-widest text-mono-400 font-semibold mb-2">Sora Yoshiura</p>
+
+            <!-- 役職バッジ -->
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-mono-800/90 border border-mono-700/80 text-xs font-medium text-mono-200 mb-3">
+                <i class="fa-solid fa-sliders text-mono-400 text-[11px]"></i>
+                <span>筆頭音響技術監督</span>
+            </div>
+
+            <!-- 所属組織 -->
+            <p class="text-sm font-medium text-mono-300">
+                鹿児島県立奄美高等学校 <span class="text-mono-400 font-normal">放送部</span>
+            </p>
+
+            <!-- 自己紹介 / バイオグラフィー -->
+            <div class="mt-4 pt-4 border-t border-mono-800/80 text-left">
+                <p class="text-xs leading-relaxed text-mono-300/90 bg-mono-950/40 p-3 rounded-xl border border-mono-800/60">
+                    専門高校の強みを活かし、より専門的な技術の研究や音声ドラマの企画・収録を行っています。
+                </p>
+            </div>
+
+            <!-- 「連絡先に追加」ボタン (vCardダウンロード) -->
+            <div class="mt-5">
+                <button id="downloadVCardBtn" class="w-full py-3 px-4 rounded-xl bg-white text-mono-950 hover:bg-mono-200 active:scale-[0.98] font-semibold text-sm tracking-wide transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">
+                    <i class="fa-solid fa-address-book text-base"></i>
+                    <span>連絡先に追加 (vCard)</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- クイックアクション / コミュニケーションリンク集 -->
+        <div class="w-full space-y-2.5">
+
+            <!-- 電話 -->
+            <a href="tel:09093621627" class="grayscale-card group flex items-center justify-between p-3.5 sm:p-4 rounded-2xl transition-all duration-200 active:scale-[0.99] hover:translate-y-[-1px]">
+                <div class="flex items-center gap-3.5 min-w-0">
+                    <div class="w-11 h-11 rounded-xl bg-mono-800/90 flex items-center justify-center text-mono-200 border border-mono-700/60 group-hover:bg-mono-700 transition">
+                        <i class="fa-solid fa-phone text-lg"></i>
+                    </div>
+                    <div class="truncate text-left">
+                        <div class="text-[11px] font-medium text-mono-400 uppercase tracking-wider">電話番号</div>
+                        <div class="text-sm font-semibold text-white tracking-wide truncate">090-9362-1627</div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-1.5 pl-2">
+                    <span class="text-xs text-mono-400 font-medium hidden sm:inline">発信</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-mono-400 group-hover:text-white transition text-xs"></i>
+                </div>
+            </a>
+
+            <!-- メール -->
+            <a href="mailto:sora.yoshiura7250@gmail.com" class="grayscale-card group flex items-center justify-between p-3.5 sm:p-4 rounded-2xl transition-all duration-200 active:scale-[0.99] hover:translate-y-[-1px]">
+                <div class="flex items-center gap-3.5 min-w-0">
+                    <div class="w-11 h-11 rounded-xl bg-mono-800/90 flex items-center justify-center text-mono-200 border border-mono-700/60 group-hover:bg-mono-700 transition">
+                        <i class="fa-solid fa-envelope text-lg"></i>
+                    </div>
+                    <div class="truncate text-left">
+                        <div class="text-[11px] font-medium text-mono-400 uppercase tracking-wider">メールアドレス</div>
+                        <div class="text-sm font-semibold text-white truncate">sora.yoshiura7250@gmail.com</div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-1.5 pl-2">
+                    <span class="text-xs text-mono-400 font-medium hidden sm:inline">作成</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-mono-400 group-hover:text-white transition text-xs"></i>
+                </div>
+            </a>
+
+            <!-- SNSグリッド (LINE & Discord) -->
+            <div class="grid grid-cols-2 gap-2.5">
+                <!-- LINE -->
+                <a href="https://line.me/ti/p/DKeCwVAgFu" target="_blank" rel="noopener noreferrer" class="grayscale-card group flex items-center justify-between p-3.5 rounded-2xl transition-all duration-200 active:scale-[0.98] hover:translate-y-[-1px]">
+                    <div class="flex items-center gap-2.5 min-w-0">
+                        <div class="w-10 h-10 rounded-xl bg-mono-800/90 flex items-center justify-center text-mono-200 border border-mono-700/60 group-hover:bg-mono-700 transition">
+                            <i class="fa-brands fa-line text-xl"></i>
+                        </div>
+                        <div class="text-left">
+                            <div class="text-[10px] font-medium text-mono-400 uppercase">LINE</div>
+                            <div class="text-xs sm:text-sm font-bold text-white truncate">友だち追加</div>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-mono-400 group-hover:text-white transition text-xs"></i>
+                </a>
+
+                <!-- Discord -->
+                <a href="https://discord.gg/Md7p94Y8" target="_blank" rel="noopener noreferrer" class="grayscale-card group flex items-center justify-between p-3.5 rounded-2xl transition-all duration-200 active:scale-[0.98] hover:translate-y-[-1px]">
+                    <div class="flex items-center gap-2.5 min-w-0">
+                        <div class="w-10 h-10 rounded-xl bg-mono-800/90 flex items-center justify-center text-mono-200 border border-mono-700/60 group-hover:bg-mono-700 transition">
+                            <i class="fa-brands fa-discord text-lg"></i>
+                        </div>
+                        <div class="text-left">
+                            <div class="text-[10px] font-medium text-mono-400 uppercase">Discord</div>
+                            <div class="text-xs sm:text-sm font-bold text-white truncate">参加する</div>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-mono-400 group-hover:text-white transition text-xs"></i>
+                </a>
+            </div>
+
+            <!-- 所在地 (Google マップへジャンプ) -->
+            <a href="https://maps.google.com/?q=鹿児島県奄美市名瀬古田町1番地1" target="_blank" rel="noopener noreferrer" class="grayscale-card group flex items-center justify-between p-3.5 sm:p-4 rounded-2xl transition-all duration-200 active:scale-[0.99] hover:translate-y-[-1px]">
+                <div class="flex items-center gap-3.5 min-w-0">
+                    <div class="w-11 h-11 rounded-xl bg-mono-800/90 flex items-center justify-center text-mono-200 border border-mono-700/60 group-hover:bg-mono-700 transition shrink-0">
+                        <i class="fa-solid fa-location-dot text-lg"></i>
+                    </div>
+                    <div class="truncate text-left">
+                        <div class="text-[11px] font-medium text-mono-400 uppercase tracking-wider">所在地 / 活動拠点</div>
+                        <div class="text-xs sm:text-sm font-medium text-white truncate">〒894-0016 鹿児島県奄美市名瀬古田町1番地1</div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-1.5 pl-2 shrink-0">
+                    <span class="text-xs text-mono-400 font-medium hidden sm:inline">地図</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-mono-400 group-hover:text-white transition text-xs"></i>
+                </div>
+            </a>
+
+            <!-- 公式Webサイト -->
+            <a href="https://www.edu.pref.kagoshima.jp/sh/amami/" target="_blank" rel="noopener noreferrer" class="grayscale-card group flex items-center justify-between p-3.5 sm:p-4 rounded-2xl transition-all duration-200 active:scale-[0.99] hover:translate-y-[-1px]">
+                <div class="flex items-center gap-3.5 min-w-0">
+                    <div class="w-11 h-11 rounded-xl bg-mono-800/90 flex items-center justify-center text-mono-200 border border-mono-700/60 group-hover:bg-mono-700 transition shrink-0">
+                        <i class="fa-solid fa-globe text-lg"></i>
+                    </div>
+                    <div class="truncate text-left">
+                        <div class="text-[11px] font-medium text-mono-400 uppercase tracking-wider">公式Webサイト</div>
+                        <div class="text-xs sm:text-sm font-medium text-white truncate">奄美高等学校 公式ホームページ</div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-1.5 pl-2 shrink-0">
+                    <span class="text-xs text-mono-400 font-medium hidden sm:inline">開く</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-mono-400 group-hover:text-white transition text-xs"></i>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- 共有/コピーアクションカード -->
+        <div class="w-full grayscale-card rounded-2xl p-3 mt-4 flex items-center justify-around gap-2 text-xs text-mono-400">
+            <button id="copyUrlBtn" class="flex-1 py-2 px-3 rounded-xl hover:bg-mono-800/70 active:bg-mono-800 flex items-center justify-center gap-2 transition text-mono-300">
+                <i class="fa-regular fa-copy"></i>
+                <span>URLを共有</span>
+            </button>
+            <span class="h-4 w-px bg-mono-800"></span>
+            <button id="copyEmailBtn" class="flex-1 py-2 px-3 rounded-xl hover:bg-mono-800/70 active:bg-mono-800 flex items-center justify-center gap-2 transition text-mono-300">
+                <i class="fa-regular fa-envelope"></i>
+                <span>メールをコピー</span>
+            </button>
+        </div>
+
+        <!-- トースト通知用メッセージボックス -->
+        <div id="toastBox" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-white text-mono-950 px-5 py-2.5 rounded-full text-xs font-semibold shadow-2xl opacity-0 pointer-events-none transition-all duration-300 z-50 flex items-center gap-2">
+            <i class="fa-solid fa-check text-mono-900"></i>
+            <span id="toastMsg">コピーしました</span>
+        </div>
+
+    </main>
+
+    <!-- フッター -->
+    <footer class="w-full text-center mt-8 text-mono-500 text-xs tracking-wider">
+        <p>&copy; Sora Yoshiura. All Rights Reserved.</p>
+    </footer>
+
+    <!-- スクリプト: vCard生成・ダウンロード、トースト通知 -->
+    <script>
+        // トースト通知表示関数
+        function showToast(message) {
+            const toast = document.getElementById('toastBox');
+            const toastMsg = document.getElementById('toastMsg');
+            toastMsg.textContent = message;
+            toast.classList.remove('opacity-0', 'translate-y-2');
+            toast.classList.add('opacity-100', 'translate-y-0');
+
+            setTimeout(() => {
+                toast.classList.remove('opacity-100', 'translate-y-0');
+                toast.classList.add('opacity-0', 'translate-y-2');
+            }, 2200);
+        }
+
+        // 写真アップロード時にブラウザ内で自動軽量化・Base64化して表示 & ローカル保存
+        const avatarUploader = document.getElementById('avatarUploader');
+        const avatarImg = document.getElementById('avatarImage');
+
+        // 保存されたアバターがあれば読み込み
+        const savedAvatar = localStorage.getItem('yoshiura_avatar_b64');
+        if (savedAvatar) {
+            avatarImg.src = savedAvatar;
+        }
+
+        avatarUploader.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const img = new Image();
+                img.onload = function() {
+                    // Canvasでリサイズ & 軽量Base64(WebP/JPEG)圧縮
+                    const canvas = document.createElement('canvas');
+                    const maxDim = 320;
+                    let width = img.width;
+                    let height = img.height;
+                    if (width > height) {
+                        if (width > maxDim) {
+                            height *= maxDim / width;
+                            width = maxDim;
+                        }
+                    } else {
+                        if (height > maxDim) {
+                            width *= maxDim / height;
+                            height = maxDim;
+                        }
+                    }
+                    canvas.width = width;
+                    canvas.height = height;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0, width, height);
+                    
+                    // 軽量Base64データURI (品質0.85)
+                    const optimizedBase64 = canvas.toDataURL('image/jpeg', 0.85);
+                    avatarImg.src = optimizedBase64;
+                    try {
+                        localStorage.setItem('yoshiura_avatar_b64', optimizedBase64);
+                    } catch (err) {
+                        console.warn('Storage limit reached');
+                    }
+                    showToast('プロフィール写真を更新しました');
+                };
+                img.src = event.target.result;
+            };
+            reader.readAsDataURL(file);
+        });
+
+        // vCard (.vcf) 生成・ダウンロード
+        document.getElementById('downloadVCardBtn').addEventListener('click', function() {
+            const vCardData = [
+                'BEGIN:VCARD',
+                'VERSION:3.0',
+                'N:吉浦;蒼空;;;',
+                'FN:吉浦 蒼空',
+                'TITLE:筆頭音響技術監督',
+                'ORG:鹿児島県立奄美高等学校 放送部',
+                'TEL;TYPE=CELL,VOICE:+819093621627',
+                'EMAIL;TYPE=INTERNET,HOME:sora.yoshiura7250@gmail.com',
+                'ADR;TYPE=WORK:;;名瀬古田町1番地1;奄美市;鹿児島県;8940016;日本',
+                'URL:https://www.edu.pref.kagoshima.jp/sh/amami/',
+                'URL;TYPE=LINE:https://line.me/ti/p/DKeCwVAgFu',
+                'URL;TYPE=Discord:https://discord.gg/Md7p94Y8',
+                'NOTE:専門高校の強みを活かし、より専門的な技術の研究や音声ドラマの企画・収録を行っています。',
+                'END:VCARD'
+            ].join('\r\n');
+
+            const blob = new Blob([vCardData], { type: 'text/vcard;charset=utf-8;' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = '吉浦蒼空_連絡先.vcf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            showToast('連絡先(vCard)を保存しました');
+        });
+
+        // 現在のURLをクリップボードにコピー
+        document.getElementById('copyUrlBtn').addEventListener('click', function() {
+            const tempInput = document.createElement('input');
+            tempInput.value = window.location.href;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            showToast('名刺URLをコピーしました');
+        });
+
+        // メールアドレスをクリップボードにコピー
+        document.getElementById('copyEmailBtn').addEventListener('click', function() {
+            const tempInput = document.createElement('input');
+            tempInput.value = 'sora.yoshiura7250@gmail.com';
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            showToast('メールアドレスをコピーしました');
+        });
+    </script>
+</body>
+</html>
+```
